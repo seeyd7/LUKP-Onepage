@@ -117,6 +117,11 @@ nav{
     margin-top: 8px;
     color: #ffc107;
 }
+@media screen and (max-width: 600px) {
+    .menu-heading {
+        margin-right: 60px;
+    }
+}
 @media screen and (max-width: 9999px){
 .home h1 {
     font-size: 50px;
