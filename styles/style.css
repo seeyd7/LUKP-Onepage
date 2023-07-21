@@ -200,6 +200,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
 }
 .info-box p {
     margin-top: 14px;
