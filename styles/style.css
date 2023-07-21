@@ -202,14 +202,26 @@ nav{
     line-height: 7px;
     text-transform: uppercase;
     font-weight: 500;
+    line-height: 1.5;
 }
 .info-box i {
     font-size: 65px;
+    width: 100px;
 }
 .info-inside {
-    margin-left: 5%;
+    margin-left: 3%;
     display: flex;
+    width: 180px;
 }
+@media screen and (max-width: 1040px) {
+    #portfolio-info {
+      flex-direction: column;
+      height: 50vh;
+    }
+    .info-box {
+      width: 100%;
+    }
+  }
 .heading{
     text-align: center;
     color:#000;
@@ -257,9 +269,17 @@ nav{
         min-height: 150vh;
     }
     .about-main-container {
-        flex-direction: column;
+        flex-direction: column !important;
+        height: auto;
     }
-}
+    .about-main-container img {
+        width: 100%;
+    }
+    .about-container-content {
+        width: 100%;
+        height: 50vh;
+    }
+  }
 main {
     min-height: 100vh;
     width: 100%;
@@ -297,5 +317,15 @@ main {
 #gallery {
     overflow: hidden;
     opacity: 0;
+}
+@media screen and (max-width: 960px) {
+    .gallery-carousel {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 700px) {
+    .gallery-carousel {
+        width: 100%;
+    }
 }
 /* Gallery */
