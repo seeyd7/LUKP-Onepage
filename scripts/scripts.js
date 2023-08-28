@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (delay) {
       element.style.animationDelay = delay;
     }
-    element.classList.add('animate__animated', 'animate__fadeInUp');
+    element.classList.add('animate__animated', 'animate__fadeIn');
   }
 
   function handleScrollAnimations(entries, observer) {
@@ -112,8 +112,8 @@ function animateAbout2OnScroll(entries, observer) {
       const aboutImage2 = entry.target.querySelector('#about-image2');
       const aboutContent2 = entry.target.querySelector('#about-container-content2');
 
-      aboutContent2.classList.add('animate__animated', 'animate__bounceIn');
-      aboutImage2.classList.add('animate__animated', 'animate__bounceIn');
+      aboutContent2.classList.add('animate__animated', 'animate__fadeInLeft');
+      aboutImage2.classList.add('animate__animated', 'animate__fadeInRight');
 
       observer.unobserve(entry.target);
     }
@@ -127,47 +127,47 @@ const options2 = {
 const aboutObserver2 = new IntersectionObserver(animateAbout2OnScroll, options2);
 aboutObserver2.observe(aboutSection2);
 
-// Gallery animation
-function animateGalleryOnScroll(entries, observer) {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const gallerySection = entry.target;
+// // Gallery animation
+// function animateGalleryOnScroll(entries, observer) {
+//   entries.forEach(entry => {
+//     if (entry.isIntersecting) {
+//       const gallerySection = entry.target;
 
-      gallerySection.classList.add('animate__animated', 'animate__backInUp');
+//       gallerySection.classList.add('animate__animated', 'animate__backInUp');
 
-      observer.unobserve(gallerySection);
-    }
-  });
-}
+//       observer.unobserve(gallerySection);
+//     }
+//   });
+// }
 
-const gallerySection = document.querySelector('#gallery');
-const galleryOptions = {
-  threshold: 0.25
-};
-const galleryObserver = new IntersectionObserver(animateGalleryOnScroll, galleryOptions);
-galleryObserver.observe(gallerySection);
+// const gallerySection = document.querySelector('#gallery');
+// const galleryOptions = {
+//   threshold: 0.25
+// };
+// const galleryObserver = new IntersectionObserver(animateGalleryOnScroll, galleryOptions);
+// galleryObserver.observe(gallerySection);
 
-// Contact animation
+// // Contact animation
 
-function animateContactOnScroll(entries, observer) {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const contactSection = entry.target;
+// function animateContactOnScroll(entries, observer) {
+//   entries.forEach(entry => {
+//     if (entry.isIntersecting) {
+//       const contactSection = entry.target;
 
-      contactSection.style.opacity = 1;
-      contactSection.classList.add('animate__animated', 'animate__bounceInRight');
+//       contactSection.style.opacity = 1;
+//       contactSection.classList.add('animate__animated', 'animate__bounceInRight');
 
-      observer.unobserve(contactSection);
-    }
-  });
-}
+//       observer.unobserve(contactSection);
+//     }
+//   });
+// }
 
-const contactSection = document.getElementById('contact');
-const contactOptions = {
-  threshold: 0.2
-};
-const contactObserver = new IntersectionObserver(animateContactOnScroll, contactOptions);
-contactObserver.observe(contactSection);
+// const contactSection = document.getElementById('contact');
+// const contactOptions = {
+//   threshold: 0.2
+// };
+// const contactObserver = new IntersectionObserver(animateContactOnScroll, contactOptions);
+// contactObserver.observe(contactSection);
 
 // Footer animation
 function animateSectionsOnScroll(entries, observer) {
@@ -176,7 +176,7 @@ function animateSectionsOnScroll(entries, observer) {
       const section = entry.target;
 
       section.style.opacity = 1;
-      section.classList.add('animate__animated', 'animate__fadeInUp');
+      section.classList.add('animate__animated', 'animate__fadeIn');
 
       observer.unobserve(section);
     }
