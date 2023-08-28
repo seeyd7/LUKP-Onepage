@@ -140,24 +140,22 @@ galleryObserver.observe(gallerySection);
 
 // Contact animation
 
-function handleContactIntersection(entries, observer) {
+function animateContactOnScroll(entries, observer) {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('animate__animated', 'animate__bounceInRight');
-      observer.unobserve(entry.target);
+      const contactSection = entry.target;
+
+      contactSection.classList.add('animate__animated', 'animate__bounceInRight');
+
+      observer.unobserve(contactSection);
     }
   });
 }
-
+const contactSection = document.querySelector('.contact');
 const contactOptions = {
-  root: null,
-  rootMargin: '0px',
   threshold: 0.5
 };
-
-const contactObserver = new IntersectionObserver(handleContactIntersection, contactOptions);
-
-const contactSection = document.querySelector('#contact');
+const contactObserver = new IntersectionObserver(animateContactOnScroll, contactOptions);
 contactObserver.observe(contactSection);
 
 
