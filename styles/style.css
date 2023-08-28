@@ -30,7 +30,7 @@ body {
     right: 40px;
     width: 40px;
     height: 40px;
-    background-color: #ffc107;
+    background-color: #e95d1c;
     border: none;
     box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
     border-radius: 6px;
@@ -58,7 +58,7 @@ body {
     background-color: white;
 }
 ::-webkit-scrollbar-thumb {
-    background-color: #ffc107;
+    background-color: #e95d1c;
     border-radius: 2;
 }
 /* Scrollbar */
@@ -104,18 +104,18 @@ nav{
     transition: .2s linear;
 }
 .navbar-menu a:hover{
-    color: #ffc107;
+    color: #e95d1c;
 }
 .navbar-menu hr {
     position: relative;
     border: none;
     height: 1.5px;
-    background: #ffc107;
+    background: #e95d1c;
 }
 .menu-heading {
     margin-right: 95px; 
     margin-top: 8px;
-    color: #ffc107;
+    color: #e95d1c;
 }
 @media screen and (max-width: 600px) {
     .menu-heading {
@@ -182,7 +182,12 @@ nav{
     visibility: visible; 
     margin-top: 35px;
 }
-
+.btn-yellow {
+    background-color: #e95d1c !important;
+}
+.btn-yellow:hover {
+    background-color: #e67b49 !important;
+}
 /* Slogan  */
 #portfolio-info {
     height: 30vh;
@@ -194,7 +199,7 @@ nav{
     overflow: hidden;
 }
 .info-box {
-    color: #ffc107;
+    color: #e95d1c;
     width: 25%;
     height: 30vh;
     display: flex;
@@ -228,16 +233,16 @@ nav{
       width: 100%;
     }
   }
-.heading{
+.heading {
     text-align: center;
     color:#000;
     text-transform: uppercase;
-    padding-top: 2rem;
-    padding-bottom: 3.5rem;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
     font-size: 3rem;
 }
 .heading span{
-    color:#ffc107;
+    color:#e95d1c;
     text-transform: uppercase;
 }
 @media screen and (max-width: 800px) {
@@ -246,7 +251,6 @@ nav{
     }
 }
 .about-main-container {
-    margin-top: 5%;
     margin-bottom: 5%;
     width: 90%;
     height: 60vh;
@@ -304,13 +308,13 @@ main {
 .btn-default {
     position: relative;
     color: white;
-    background: #ffc107;
+    background: #e95d1c;
     padding: 10px 40px 10px 40px;
     margin-top: 1vh;
     transition: .4s; 
 }
 .btn-default:hover {
-    background: #e4ad08;
+    background: #e67b49;
     color: white;
     padding: 10px 60px 10px 60px;
 }
@@ -377,7 +381,7 @@ main {
 }
 .contact-form .btn{
     border: none;
-    background-color: #ffc107;
+    background-color: #e95d1c;
     width: 180px;
     color: #fff;
     font-size: 16px;
@@ -388,7 +392,7 @@ main {
     transition: .3s linear;
 }
 .contact-form .btn:hover{
-    background: #e4ad08;
+    background: #e67b49;
 }
 .nameZone, .emailZone{
     max-width: calc(50% - 10px);
@@ -450,7 +454,7 @@ footer a {
 } 
 footer a:hover {
     text-decoration: none;
-    color: #ffc107;
+    color: #e95d1c;
 } 
 @media screen and (max-width: 670px) {
     #hours {
