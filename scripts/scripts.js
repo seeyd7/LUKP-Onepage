@@ -138,5 +138,26 @@ const galleryOptions = {
 const galleryObserver = new IntersectionObserver(animateGalleryOnScroll, galleryOptions);
 galleryObserver.observe(gallerySection);
 
+// Contact animation
+
+function handleContactIntersection(entries, observer) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate__animated', 'animate__bounceInRight');
+      observer.unobserve(entry.target);
+    }
+  });
+}
+
+const contactOptions = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.5
+};
+
+const contactObserver = new IntersectionObserver(handleContactIntersection, contactOptions);
+
+const contactSection = document.querySelector('#contact');
+contactObserver.observe(contactSection);
 
 
