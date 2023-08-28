@@ -28,19 +28,19 @@ navLinks.forEach(link => {
 });
 
 // Go2Top script
+go2Top.style.opacity = 0;
+go2Top.style.cursor = "default";
+
 addEventListener("scroll", () => {
-	let scroll = this.scrollY;
-	if(scroll > menu.clientHeight) {
-    go2Top.style.opacity = 1;
-    go2Top.style.lineHeight = "40px";
-		go2Top.style.cursor = "pointer";
-		console.log(go2Top.style.cursor);
-	} else {
-		go2Top.style.opacity = 0;
-		go2Top.style.cursor = "default";
-		console.log(go2Top.style.cursor);
-	}
-})
+    let scroll = this.scrollY;
+    if (scroll > menu.clientHeight) {
+        go2Top.style.opacity = 1;
+        go2Top.style.cursor = "pointer";
+    } else {
+        go2Top.style.opacity = 0;
+        go2Top.style.cursor = "default";
+    }
+});
 
 go2Top.addEventListener("click", () => {
 	if(go2Top.style.opacity != 0) window.scrollTo(0, 0);
