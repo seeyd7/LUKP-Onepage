@@ -2,12 +2,13 @@
 const menuToggler = document.querySelector(".menu-toggler");
 const navMenu = document.querySelector(".navbar-menu");
 const darkenElement = document.querySelector(".darken");
+const navLinks = document.querySelectorAll(".navbar-menu a");
 
 menuToggler.addEventListener("click", () => {
   if (menuToggler.classList.contains("active")) {
     menuToggler.classList.remove("active");
     navMenu.classList.remove("active");
-    darkenElement.style.zIndex = "0";
+    darkenElement.style.zIndex = "-999";
     darkenElement.style.opacity = "0";
   } else {
     menuToggler.classList.add("active");
@@ -17,6 +18,14 @@ menuToggler.addEventListener("click", () => {
   }
 });
 
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    menuToggler.classList.remove("active");
+    navMenu.classList.remove("active");
+    darkenElement.style.zIndex = "-999";
+    darkenElement.style.opacity = "0";
+  });
+});
 
 // Go2Top script
 addEventListener("scroll", () => {
@@ -145,17 +154,42 @@ function animateContactOnScroll(entries, observer) {
     if (entry.isIntersecting) {
       const contactSection = entry.target;
 
+      contactSection.style.opacity = 1;
       contactSection.classList.add('animate__animated', 'animate__bounceInRight');
 
       observer.unobserve(contactSection);
     }
   });
 }
-const contactSection = document.querySelector('.contact');
+
+const contactSection = document.getElementById('contact');
 const contactOptions = {
-  threshold: 0.5
+  threshold: 0.2
 };
 const contactObserver = new IntersectionObserver(animateContactOnScroll, contactOptions);
 contactObserver.observe(contactSection);
 
+// Footer animation
+function animateSectionsOnScroll(entries, observer) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const section = entry.target;
 
+      section.style.opacity = 1;
+      section.classList.add('animate__animated', 'animate__fadeInUp');
+
+      observer.unobserve(section);
+    }
+  });
+}
+
+const sections = document.querySelectorAll('.triple > div, .fb-div');
+const observerOptions = {
+  threshold: 0.2
+};
+const sectionObserver = new IntersectionObserver(animateSectionsOnScroll, observerOptions);
+
+sections.forEach(section => {
+  section.style.opacity = 0;
+  sectionObserver.observe(section);
+});

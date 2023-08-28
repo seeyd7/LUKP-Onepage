@@ -337,6 +337,7 @@ main {
 /* Gallery */
 /* Contact */
 .contact {
+    opacity: 0;
     background-color: var(--bg);
     height: 60vh;
     display: flex;
@@ -423,6 +424,9 @@ footer .triple div p {
 }
 .fb {
     margin-top: 1em;
+}
+#scope, #address, #hours, .fb-div {
+    opacity: 0;
 }
 footer .copyright {
     display: block;
