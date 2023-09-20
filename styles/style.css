@@ -70,11 +70,19 @@ nav{
     padding: 2%;
     z-index: 9999;
     transition: .3s linear;
-    height: 12vh;
+    height: 16vh;
 }
 .logo img {
-    height: 10vh;
+    height: 15vh;
     width: auto;
+}
+@media screen and (max-width: 600px) {
+    .logo img {
+        height: 10vh;
+    }
+    nav {
+        height: 11vh;
+    }
 }
 .menu-toggler{
     background: none;
@@ -339,6 +347,65 @@ main {
 }
 @media screen and (max-width: 700px) {
     .gallery-carousel {
+        width: 100%;
+    }
+}
+.testimonial-icon {
+    color: #fff;
+    font-size: 64pt;
+    padding: 1% 0;
+}
+.flickity-prev-next-button {
+    width: 44px;
+    height: 44px;
+    transition: .2s ease-in;
+} 
+.flickity-prev-next-button:hover {
+    color: #e95d1c;
+}
+.carousel-cell {
+    padding: 80px 20px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 10pt;
+    left: 0 !important;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+    min-height: 80vh;
+} 
+.carousel-cell.is-selected {
+    opacity: 1;
+    z-index: 0;
+} 
+.carousel-cell p {
+    font-size: 14pt;
+    width: 70%;
+    line-height: 28px;
+    color: #fff;
+    text-align: center;
+} 
+.carousel-cell h2 {
+    color: #e95d1c;
+    font-weight: bold;
+    font-size: 22pt;
+}
+@media screen and (max-width: 880px) {
+    .carousel-cell h2 {
+        font-size: 20pt;
+    }
+    .carousel-cellp {
+        font-size: 12pt;
+    }
+}
+@media screen and (max-width: 710px) {
+    .carousel-cell {
         width: 100%;
     }
 }
