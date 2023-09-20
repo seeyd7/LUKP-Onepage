@@ -127,48 +127,6 @@ const options2 = {
 const aboutObserver2 = new IntersectionObserver(animateAbout2OnScroll, options2);
 aboutObserver2.observe(aboutSection2);
 
-// // Gallery animation
-// function animateGalleryOnScroll(entries, observer) {
-//   entries.forEach(entry => {
-//     if (entry.isIntersecting) {
-//       const gallerySection = entry.target;
-
-//       gallerySection.classList.add('animate__animated', 'animate__backInUp');
-
-//       observer.unobserve(gallerySection);
-//     }
-//   });
-// }
-
-// const gallerySection = document.querySelector('#gallery');
-// const galleryOptions = {
-//   threshold: 0.25
-// };
-// const galleryObserver = new IntersectionObserver(animateGalleryOnScroll, galleryOptions);
-// galleryObserver.observe(gallerySection);
-
-// // Contact animation
-
-// function animateContactOnScroll(entries, observer) {
-//   entries.forEach(entry => {
-//     if (entry.isIntersecting) {
-//       const contactSection = entry.target;
-
-//       contactSection.style.opacity = 1;
-//       contactSection.classList.add('animate__animated', 'animate__bounceInRight');
-
-//       observer.unobserve(contactSection);
-//     }
-//   });
-// }
-
-// const contactSection = document.getElementById('contact');
-// const contactOptions = {
-//   threshold: 0.2
-// };
-// const contactObserver = new IntersectionObserver(animateContactOnScroll, contactOptions);
-// contactObserver.observe(contactSection);
-
 // Footer animation
 function animateSectionsOnScroll(entries, observer) {
   entries.forEach(entry => {
@@ -193,3 +151,4 @@ sections.forEach(section => {
   section.style.opacity = 0;
   sectionObserver.observe(section);
 });
+
