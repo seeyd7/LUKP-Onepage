@@ -30,7 +30,7 @@ body {
     right: 40px;
     width: 40px;
     height: 40px;
-    background-color: #e95d1c;
+    background-color: #ff9f43;
     border: none;
     box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
     border-radius: 6px;
@@ -57,7 +57,7 @@ body {
     background-color: white;
 }
 ::-webkit-scrollbar-thumb {
-    background-color: #e95d1c;
+    background-color: #ff9f43;
     border-radius: 2;
 }
 /* Scrollbar */
@@ -111,18 +111,18 @@ nav{
     transition: .2s linear;
 }
 .navbar-menu a:hover{
-    color: #e95d1c;
+    color: #ff9f43;
 }
 .navbar-menu hr {
     position: relative;
     border: none;
     height: 1.5px;
-    background: #e95d1c;
+    background: #ff9f43;
 }
 .menu-heading {
     margin-right: 95px; 
     margin-top: 8px;
-    color: #e95d1c;
+    color: #ff9f43;
 }
 @media screen and (max-width: 600px) {
     .menu-heading {
@@ -190,13 +190,15 @@ nav{
     margin-top: 35px;
 }
 .btn-yellow {
-    background-color: #e95d1c !important;
+    background-color: #ff9f43 !important;
 }
 .btn-yellow:hover {
     background-color: #e67b49 !important;
 }
 /* Slogan  */
 #portfolio-info {
+    padding-left: 2%;
+    padding-right: 2%;
     height: 30vh;
     background-color: rgb(255, 255, 255);
     display: flex !important;
@@ -206,7 +208,7 @@ nav{
     overflow: hidden;
 }
 .info-box {
-    color: #e95d1c;
+    color: #ff9f43;
     width: 25%;
     height: 30vh;
     display: flex;
@@ -249,7 +251,7 @@ nav{
     font-size: 3rem;
 }
 .heading span{
-    color:#e95d1c;
+    color:#ff9f43;
     text-transform: uppercase;
 }
 @media screen and (max-width: 800px) {
@@ -315,7 +317,7 @@ main {
 .btn-default {
     position: relative;
     color: white;
-    background: #e95d1c;
+    background: #ff9f43;
     padding: 10px 40px 10px 40px;
     margin-top: 1vh;
     transition: .4s; 
@@ -363,7 +365,7 @@ main {
     transition: .2s ease-in;
 } 
 .flickity-prev-next-button:hover {
-    color: #e95d1c;
+    color: #ff9f43;
 }
 .carousel-cell {
     padding: 80px 20px;
@@ -394,7 +396,7 @@ main {
     text-align: center;
 } 
 .carousel-cell h2 {
-    color: #e95d1c;
+    color: #ff9f43;
     font-weight: bold;
     font-size: 22pt;
 }
@@ -447,7 +449,7 @@ main {
 }
 .contact-form .btn{
     border: none;
-    background-color: #e95d1c;
+    background-color: #ff9f43;
     width: 180px;
     color: #fff;
     font-size: 16px;
@@ -520,7 +522,7 @@ footer a {
 } 
 footer a:hover {
     text-decoration: none;
-    color: #e95d1c;
+    color: #ff9f43;
 } 
 @media screen and (max-width: 670px) {
     #hours {
@@ -542,7 +544,7 @@ footer a:hover {
     flex-direction: column;
     text-align: center;
     margin-top: 3.5vh;
-    background-color: #F2E9D7;
+    background-color: #222f3e;
     color: #fff;
 } 
 .wrapper .card-holder {
@@ -566,18 +568,19 @@ footer a:hover {
     justify-content: flex-start;
     align-items: center;
     padding: 2% 3%;
-    width: 50%;
+    width: 25%;
     cursor: pointer;
     transition: .2s ease-in;
 } 
 .meta-card i {
     font-size: 36pt;
     margin-bottom: 10%;
-    color: #000;
+    color: #ff9f43;
+    transition: .2s ease-in;
 } 
 .meta-card h4 {
     font-size: 22pt;
-    color: #000;
+    color: #fff;
 } 
 .meta-card img {
     width: 100px;
@@ -585,7 +588,10 @@ footer a:hover {
 }
 .meta-card:hover {
     transform: scale(1.05);
-    background: #e95d1c;
+    background: #ff9f43;
+}
+.meta-card:hover i {
+    color: white;
 }
 .offer-slider{
     height: 100%;
@@ -669,6 +675,11 @@ footer a:hover {
     .offer-slider-image {
         width: 50%;
         margin: 2%;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .meta-card {
+        width: 50%;
     }
 }
 /* Offer */
