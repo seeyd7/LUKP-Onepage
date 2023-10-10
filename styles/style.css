@@ -649,22 +649,6 @@ footer a:hover {
     cursor: pointer;
     color: var(--main-color);
 }
-@media screen and (max-width: 780px) {
-    .meta-card i {
-        font-size: 32pt;
-    }
-    .meta-card h4 {
-        font-size: 18pt;
-    }
-}
-@media screen and (max-width: 420px) {
-    .wrapper .card-holder {
-        flex-direction: column;
-    }
-    .meta-card {
-        width: 100%;
-    }
-}
 @media screen and (max-width: 1100px) {
     .offer-slider {
         flex-direction: column;
@@ -680,6 +664,22 @@ footer a:hover {
 @media screen and (max-width: 1000px) {
     .meta-card {
         width: 50%;
+    }
+}
+@media screen and (max-width: 780px) {
+    .meta-card i {
+        font-size: 32pt;
+    }
+    .meta-card h4 {
+        font-size: 18pt;
+    }
+}
+@media screen and (max-width: 420px) {
+    .wrapper .card-holder {
+        flex-direction: column;
+    }
+    .meta-card {
+        width: 100%;
     }
 }
 /* Offer */
