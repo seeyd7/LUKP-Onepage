@@ -18,15 +18,6 @@ menuToggler.addEventListener("click", () => {
   }
 });
 
-// navLinks.forEach(link => {
-//   link.addEventListener("click", () => {
-//     menuToggler.classList.remove("active");
-//     navMenu.classList.remove("active");
-//     darkenElement.style.zIndex = "-999";
-//     darkenElement.style.opacity = "0";
-//   });
-// });
-
 window.onscroll = () => { 
     const myNav = document.querySelector("nav");
 
@@ -55,6 +46,7 @@ function call() {
 const sliders = document.querySelectorAll(".offer-slider");
 const sliderButtons = document.querySelectorAll(".offer-slider-disable");
 const enablers = document.querySelectorAll(".offer-slider-enabler");
+const navToggler = document.querySelector(".menu-toggler");
  
 enablers.forEach(enabler => {enabler.addEventListener('click', showHide, false);});
 function showHide(elem) {
@@ -70,29 +62,6 @@ function showHide(elem) {
         button.classList.contains("button-active") ? button.classList.remove("button-active", i == this.id)
                                                    : button.classList.toggle("button-active", i == this.id);
     });
-}
-
-sliderButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const html = document.querySelector('html');
-    html.style.overflow = '';
-  });
-});
-
-var offerSliderQuestion = document.querySelectorAll(".offer-slider-question");
-
-for (var i = 0; i < offerSliderQuestion.length; i++) {
-   offerSliderQuestion[i].addEventListener("click", function() {
-       var tekst_id = this.getAttribute("data-tekst-id");
-
-       var teksty = document.querySelectorAll(".offer-slider-text");
-       for (var j = 0; j < teksty.length; j++) {
-           teksty[j].style.display = "none";
-       }
-
-       var wybrany_tekst = document.getElementById(tekst_id);
-       wybrany_tekst.style.display = "block";
-   });
 }
 
 // Footer animation
