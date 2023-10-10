@@ -657,8 +657,9 @@ footer a:hover {
         width: 80%;
     }
     .offer-slider-image {
-        width: 50%;
-        margin: 2%;
+        width: 90%;
+        margin-top: 4%;
+        margin-bottom: 2%;
     }
 }
 @media screen and (max-width: 1000px) {
