@@ -61,6 +61,8 @@ function showHide(elem) {
     sliderButtons.forEach((button, i) => {
         button.classList.contains("button-active") ? button.classList.remove("button-active", i == this.id)
                                                    : button.classList.toggle("button-active", i == this.id);
+                                              
+        if(!button.classList.contains("button-active") && i == this.id) document.querySelector("html").style.overflow = "scroll";
     });
 }
 
